@@ -3,7 +3,8 @@ using System.Collections;
 using System.Linq;
 using System;
 
-public class CarDetectorScript : MonoBehaviour {
+public class CarDetectorScript : MonoBehaviour
+{
 
 	public float angle = 360;
 	public bool ApplyThresholds, ApplyLimits;
@@ -26,13 +27,34 @@ public class CarDetectorScript : MonoBehaviour {
 
 	void Update()
 	{
-		// YOUR CODE HERE
 
-		GameObject[] cars = null;
+		GameObject[] Cars;
+		float minDist = float.MaxValue;
 		GameObject closestCar = null;
 
 		output = 0;
+		if (useAngle)
+		{
+			Cars = GetVisibleCars();
+		}
+		else
+		{
+			Cars = GetAllCars();
+		}
+		numObjects = Cars.Length;
 
+		foreach (GameObject car in Cars)
+		{
+			float currDist = (transform.position - car.transform.position).magnitude;
+
+			if (currDist < minDist)
+			{
+				minDist = currDist;
+				closestCar = car;
+				output += 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
+			}
+
+		}
 
 	}
 
@@ -45,6 +67,29 @@ public class CarDetectorScript : MonoBehaviour {
 	}
 
 	// YOUR CODE HERE
+	GameObject[] GetVisibleCars()
+	{
+		ArrayList visiblecars = new ArrayList();
+		float halfangle = angle / 2.0f;
+
+		GameObject[] Cars = GameObject.FindGameObjectsWithTag("CarToFollow");
+
+		foreach (GameObject car in Cars)
+		{
+			Vector3 tovector = (car.transform.position - transform.position);
+			Vector3 forward = transform.forward;
+			tovector.y = 0;
+			forward.y = 0;
+
+			float angletotarget = Vector3.Angle(forward, tovector);
+
+			if (angletotarget <= halfangle)
+			{
+				visiblecars.Add(car);
+			}
+		}
+		return (GameObject[])visiblecars.ToArray(typeof(GameObject));
+	}
 
 
 }

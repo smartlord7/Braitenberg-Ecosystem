@@ -56,14 +56,14 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\LightDetectorGaussScript.cs" />
+    <Compile Include="Assets\Scripts\CarDetectorGaussScript.cs" />
+    <Compile Include="Assets\Scripts\LightDetectorScript.cs" />
+    <Compile Include="Assets\Scripts\LightDetectorLinearScript.cs" />
+    <Compile Include="Assets\Scripts\CarDetectorLinearScript.cs" />
     <Compile Include="Assets\Scripts\CarBehaviour2a.cs" />
     <Compile Include="Assets\Scripts\CarBehaviour.cs" />
-    <Compile Include="Assets\Scripts\LightDetectorLinearScript.cs" />
     <Compile Include="Assets\Scripts\CarDetectorScript.cs" />
-    <Compile Include="Assets\Scripts\CarDetectorLinearScript.cs" />
-    <Compile Include="Assets\Scripts\CarDetectorGaussScript.cs" />
-    <Compile Include="Assets\Scripts\LightDetectorGaussScript.cs" />
-    <Compile Include="Assets\Scripts\LightDetectorScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
