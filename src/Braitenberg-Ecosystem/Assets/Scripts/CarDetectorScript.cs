@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Linq;
 using System;
+using System.Runtime.ConstrainedExecution;
 
 public class CarDetectorScript : MonoBehaviour
 {
@@ -51,11 +52,11 @@ public class CarDetectorScript : MonoBehaviour
 			{
 				minDist = currDist;
 				closestCar = car;
-				output += 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
 			}
-
 		}
 
+		output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
+		Debug.DrawLine(transform.position, closestCar.transform.position, Color.red);
 	}
 
 	public virtual float GetOutput() { throw new NotImplementedException(); }
