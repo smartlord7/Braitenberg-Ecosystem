@@ -1,96 +1,98 @@
-﻿using UnityEngine;
+﻿using System;
 using System.Collections;
-using System.Linq;
-using System;
-using System.Runtime.ConstrainedExecution;
+using UnityEngine;
 
 public class CarDetectorScript : MonoBehaviour
 {
 
-	public float angle = 360;
-	public bool ApplyThresholds, ApplyLimits;
-	public float MinX, MaxX, MinY, MaxY;
-	private bool useAngle = true;
+    private bool useAngle = true;
 
-	public float output;
-	public int numObjects;
+    public float angle = 360;
+    public bool ApplyThresholds, ApplyLimits;
+    public float MinX, MaxX, MinY, MaxY;
+    public float output;
+    public int numObjects;
 
-	void Start()
-	{
-		output = 0;
-		numObjects = 0;
+    void Start()
+    {
+        output = 0;
+        numObjects = 0;
 
-		if (angle > 360)
-		{
-			useAngle = false;
-		}
-	}
+        if (angle > 360)
+        {
+            useAngle = false;
+        }
+    }
 
-	void Update()
-	{
+    void Update()
+    {
 
-		GameObject[] Cars;
-		float minDist = float.MaxValue;
-		GameObject closestCar = null;
+        GameObject[] Cars;
+        float minDist = float.MaxValue;
+        GameObject closestCar = null;
 
-		output = 0;
-		if (useAngle)
-		{
-			Cars = GetVisibleCars();
-		}
-		else
-		{
-			Cars = GetAllCars();
-		}
-		numObjects = Cars.Length;
+        output = 0;
+        if (useAngle)
+        {
+            Cars = GetVisibleCars();
+        }
+        else
+        {
+            Cars = GetAllCars();
+        }
+        numObjects = Cars.Length;
 
-		foreach (GameObject car in Cars)
-		{
-			float currDist = (transform.position - car.transform.position).magnitude;
+        foreach (GameObject car in Cars)
+        {
+            float currDist = (transform.position - car.transform.position).magnitude;
 
-			if (currDist < minDist)
-			{
-				minDist = currDist;
-				closestCar = car;
-			}
-		}
+            if (currDist < minDist)
+            {
+                minDist = currDist;
+                closestCar = car;
+            }
+        }
 
-		output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
-		Debug.DrawLine(transform.position, closestCar.transform.position, Color.red);
-	}
+        if (closestCar != null)
+        {
+            output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
+        }
 
-	public virtual float GetOutput() { throw new NotImplementedException(); }
+        Debug.DrawLine(transform.position, closestCar.transform.position, Color.red);
+    }
 
-	// Returns all "Light" tagged objects. The sensor angle is not taken into account.
-	GameObject[] GetAllCars()
-	{
-		return GameObject.FindGameObjectsWithTag("CarToFollow");
-	}
+    public virtual float GetOutput() { throw new NotImplementedException(); }
 
-	// YOUR CODE HERE
-	GameObject[] GetVisibleCars()
-	{
-		ArrayList visiblecars = new ArrayList();
-		float halfangle = angle / 2.0f;
+    // Returns all "Light" tagged objects. The sensor angle is not taken into account.
+    GameObject[] GetAllCars()
+    {
+        return GameObject.FindGameObjectsWithTag("CarToFollow");
+    }
 
-		GameObject[] Cars = GameObject.FindGameObjectsWithTag("CarToFollow");
+    // YOUR CODE HERE
+    GameObject[] GetVisibleCars()
+    {
+        ArrayList visiblecars = new ArrayList();
+        float halfangle = angle / 2.0f;
 
-		foreach (GameObject car in Cars)
-		{
-			Vector3 tovector = (car.transform.position - transform.position);
-			Vector3 forward = transform.forward;
-			tovector.y = 0;
-			forward.y = 0;
+        GameObject[] Cars = GameObject.FindGameObjectsWithTag("CarToFollow");
 
-			float angletotarget = Vector3.Angle(forward, tovector);
+        foreach (GameObject car in Cars)
+        {
+            Vector3 tovector = (car.transform.position - transform.position);
+            Vector3 forward = transform.forward;
+            tovector.y = 0;
+            forward.y = 0;
 
-			if (angletotarget <= halfangle)
-			{
-				visiblecars.Add(car);
-			}
-		}
-		return (GameObject[])visiblecars.ToArray(typeof(GameObject));
-	}
+            float angletotarget = Vector3.Angle(forward, tovector);
+
+            if (angletotarget <= halfangle)
+            {
+                visiblecars.Add(car);
+            }
+        }
+        return (GameObject[])visiblecars.ToArray(typeof(GameObject));
+    }
 
 
 }

@@ -1,18 +1,19 @@
-﻿using UnityEngine;
-using System.Collections;
-using System.Linq;
-using System;
+﻿public class CarDetectorLinearScript : CarDetectorScript
+{
 
-public class CarDetectorLinearScript : CarDetectorScript {
+    public bool Inverse = false;
+    public override float GetOutput()
+    {
+        if (Inverse)
+        {
+            return -output;
+        }
+        else
+        {
+            return output;
+        }
+    }
 
-	public override float GetOutput()
-	{
-		return output;
-	}
-
-	// YOUR CODE HERE
-
-
-
+    // YOUR CODE HERE
 
 }
