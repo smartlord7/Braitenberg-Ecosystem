@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 118578, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: m_Name
-      value: Follower 1
+      value: Follower Variant
       objectReference: {fileID: 0}
     - target: {fileID: 118578, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: m_TagString
@@ -59,6 +59,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2363986, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 64e672367e0377f4f8e3fa885538b50f, type: 2}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LeftCD
       value: 
