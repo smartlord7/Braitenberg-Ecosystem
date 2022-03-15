@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\SceneInitializerScript.cs" />
     <Compile Include="Assets\Scripts\CarBehaviour2a.cs" />
     <Compile Include="Assets\Scripts\CarBehaviour.cs" />
+    <Compile Include="Assets\Scripts\CameraBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
