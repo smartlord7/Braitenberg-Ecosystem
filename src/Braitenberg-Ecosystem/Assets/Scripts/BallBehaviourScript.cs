@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class BallBehaviourScript : MonoBehaviour
 {
@@ -14,7 +15,16 @@ public class BallBehaviourScript : MonoBehaviour
 
             Vector3 pos = new Vector3(x, y, z);
             Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
-            Instantiate(collision.rigidbody.gameObject, pos, rot);
+
+            float value = Random.Range(0, 100);
+
+            if (0 <= value && value <= 10)
+            {
+                GameObject newObj = Instantiate(collision.rigidbody.gameObject, pos, rot);
+                var mat = Resources.Load("Ball", typeof(Material)) as Material;
+                newObj.GetComponent<Renderer>().material = mat;
+                newObj.GetComponent<Renderer>().material.SetColor("_Color", new Color(x, y, z));
+            }
         }
     }
 }
