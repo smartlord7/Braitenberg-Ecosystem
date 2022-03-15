@@ -40,25 +40,31 @@ public class CarDetectorScript : MonoBehaviour
         {
             Cars = GetAllCars();
         }
-        numObjects = Cars.Length;
 
-        foreach (GameObject car in Cars)
+        if (Cars != null)
         {
-            float currDist = (transform.position - car.transform.position).magnitude;
 
-            if (currDist < minDist)
+            numObjects = Cars.Length;
+
+
+            foreach (GameObject car in Cars)
             {
-                minDist = currDist;
-                closestCar = car;
+                float currDist = (transform.position - car.transform.position).magnitude;
+
+                if (currDist < minDist)
+                {
+                    minDist = currDist;
+                    closestCar = car;
+                }
             }
-        }
 
-        if (closestCar != null)
-        {
-            output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
-        }
+            if (closestCar != null)
+            {
+                output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
+                Debug.DrawLine(transform.position, closestCar.transform.position, Color.red);
+            }
 
-        Debug.DrawLine(transform.position, closestCar.transform.position, Color.red);
+        }
     }
 
     public virtual float GetOutput() { throw new NotImplementedException(); }

@@ -321,6 +321,8 @@ MonoBehaviour:
   RL: {fileID: 14675050}
   DetectLights: 1
   DetectCars: 0
+  DirectLightSensorsConnection: 0
+  DirectCarSensorsConnection: 0
   RightLD: {fileID: 1010094822325634599}
   LeftLD: {fileID: 6101812135912574356}
   LeftCD: {fileID: 0}
@@ -738,7 +740,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70ee92d27c24f480186ec15929d4826e, type: 2}
+  - {fileID: 2100000, guid: c7acad4fb00751f478731ce12c861999, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1155,6 +1157,7 @@ MonoBehaviour:
   MaxY: 0
   output: 0
   numObjects: 0
+  Inverse: 0
 --- !u!1 &960635259960354729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1244,7 @@ MonoBehaviour:
   MaxY: 0
   output: 0
   numObjects: 0
+  Inverse: 0
 --- !u!1 &4469401387021470119
 GameObject:
   m_ObjectHideFlags: 0
