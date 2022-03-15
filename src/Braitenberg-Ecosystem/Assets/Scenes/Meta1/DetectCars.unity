@@ -181,7 +181,7 @@ MonoBehaviour:
   - {fileID: 8144368417528862532, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
   - {fileID: 6188935445942466046, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
   - {fileID: 2572758933297449156, guid: 5912e06d8d9484e4ba5e22a9fbedefeb, type: 3}
-  generatedObjectsOcurrences: 1400000050000000280000000000000000000000000000000000000014000000
+  generatedObjectsOcurrences: 1400000001000000280000000000000000000000000000000000000014000000
 --- !u!1 &225651674
 GameObject:
   m_ObjectHideFlags: 0
@@ -611,6 +611,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c52d2eba7a2fe9499fac4da7278413a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MainSpeed: 100
+  ShiftAdd: 250
+  MaxShift: 1000
+  CamSens: 0.25
 --- !u!20 &1505371833
 Camera:
   m_ObjectHideFlags: 0

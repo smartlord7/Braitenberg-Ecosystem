@@ -3,6 +3,13 @@ using UnityEngine;
 
 public class BallBehaviourScript : MonoBehaviour
 {
+
+    private Rigidbody _rigidbody;
+
+    private void Start()
+    {
+        _rigidbody = GetComponent<Rigidbody>();
+    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.rigidbody?.name.StartsWith("Ball") ?? false)
@@ -24,6 +31,20 @@ public class BallBehaviourScript : MonoBehaviour
                 var mat = Resources.Load("Ball", typeof(Material)) as Material;
                 newObj.GetComponent<Renderer>().material = mat;
                 newObj.GetComponent<Renderer>().material.SetColor("_Color", new Color(Math.Abs(x) / 20, y, Math.Abs(z) / 20));
+            }
+        }
+        else if (collision.rigidbody?.name.Contains("Variant") ?? false)
+        {
+            float carVelocityMag = (collision.rigidbody.velocity).magnitude;
+            float thisVelocityMag = (_rigidbody.velocity).magnitude;
+
+            if (carVelocityMag > thisVelocityMag)
+            {
+                gameObject.SetActive(false);
+            }
+            else if (carVelocityMag < thisVelocityMag)
+            {
+                collision.gameObject.SetActive(false);
             }
         }
     }
