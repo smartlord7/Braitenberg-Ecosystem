@@ -670,15 +670,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
-      value: 2
+      value: 3.59
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
-      value: 0.8
+      value: 0.719
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
@@ -690,7 +690,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
-      value: 0.4
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMin
@@ -702,11 +702,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: inverse
@@ -714,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
-      value: 0.7
+      value: 0.79
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
@@ -726,7 +726,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
-      value: 0.8
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMin
