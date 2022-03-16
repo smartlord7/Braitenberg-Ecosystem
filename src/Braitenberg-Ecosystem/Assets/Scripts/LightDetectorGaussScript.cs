@@ -1,17 +1,36 @@
-﻿public class LightDetectorGaussScript : LightDetectorScript
+﻿using System;
+
+public class LightDetectorGaussScript : LightDetectorScript
 {
 
-    public float stdDev = 1.0f;
-    public float mean = 0.0f;
-    public float min_y;
+    public float stdDev = 20;
+    public float mean = 10.0f;
     public bool inverse = false;
+
+
     // Get gaussian output value
     public override float GetOutput()
     {
-        // YOUR CODE HERE
+        float outputActivated = 0;
 
-        return 0.0f;
+        if (!ApplyThresholds || ThresholdMin <= output && output <= ThresholdMax)
+        {
+            outputActivated = (float) Math.Exp(-0.5 * Math.Pow(output - mean, 2) / Math.Pow(stdDev, 2));
+        }
+
+        if (ApplyLimits)
+        {
+            if (outputActivated < LimitMin)
+            {
+                outputActivated = LimitMin;
+            }
+            else if (outputActivated > LimitMax)
+            {
+                outputActivated = LimitMax;
+            }
+        }
+
+
+        return outputActivated;
     }
-
-
 }
