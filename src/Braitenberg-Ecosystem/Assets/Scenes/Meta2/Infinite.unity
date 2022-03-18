@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657815, g: 0.49641192, b: 0.57481617, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &4
 LightmapSettings:
@@ -773,19 +773,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
-      value: 4
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
-      value: 4
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
-      value: 0.719
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyLimits
@@ -801,15 +801,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyThresholds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
-      value: 3.5
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
-      value: 5
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: inverse
@@ -817,11 +817,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
-      value: 0.79
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyLimits
@@ -837,7 +837,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyThresholds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LeftLD
@@ -853,11 +853,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: DirectCarSensorsConnection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: DirectLightSensorsConnection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8144368417528404464, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: m_RootOrder
