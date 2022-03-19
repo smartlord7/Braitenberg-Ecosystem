@@ -14,7 +14,9 @@ public class CarBehaviour : MonoBehaviour
     public LightDetectorScript LeftLD;
     public CarDetectorScript LeftCD;
     public CarDetectorScript RightCD;
-
+    public float currentScale = 1.0f;
+    public float maxScale = 1.5f;
+    public float scaleMult = 1.1f;
 
     private Rigidbody m_Rigidbody;
     public float m_LeftWheelSpeed;
@@ -40,5 +42,36 @@ public class CarBehaviour : MonoBehaviour
         //Apply to rigid body
         m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
         m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
+    }
+
+    public void OnCollisionEnter(Collision collision)
+    {
+        var other = collision.rigidbody;
+
+        if (other?.name.Contains("Ball") ?? false)
+        {
+            float carVelocity = (m_Rigidbody.velocity).magnitude;
+            float ballVelocity = (other?.velocity)?.magnitude ?? -1;
+
+            if (ballVelocity == -1)
+            {
+                return;
+            }
+
+            if (carVelocity > ballVelocity + 0.2)
+            {
+                other.gameObject.SetActive(false);
+
+                if (currentScale < maxScale)
+                {
+                    m_Rigidbody.transform.localScale *= scaleMult;
+                    currentScale *= scaleMult;
+                }
+                else
+                {
+                    m_Rigidbody.transform.localScale = maxScale * Vector3.one;
+                }
+            }
+        }
     }
 }
