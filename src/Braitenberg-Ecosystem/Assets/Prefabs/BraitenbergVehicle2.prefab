@@ -303,7 +303,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 2
 --- !u!114 &11496184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -316,15 +316,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6476b914ffbc547fcbe1121d8dba100a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 5
+  MaxSpeed: 15
   RR: {fileID: 14660592}
   RL: {fileID: 14675050}
   DetectLights: 1
   DetectCars: 0
+  DirectLightSensorsConnection: 0
+  DirectCarSensorsConnection: 0
   RightLD: {fileID: 1010094822325634599}
   LeftLD: {fileID: 6101812135912574356}
   LeftCD: {fileID: 0}
   RightCD: {fileID: 0}
+  currentScale: 1
+  maxScale: 1.5
+  scaleMult: 1.1
   m_LeftWheelSpeed: 0
   m_RightWheelSpeed: 0
 --- !u!1 &119292
@@ -594,15 +599,14 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
   stdDev: 1
   mean: 0
-  min_y: 0
   inverse: 0
 --- !u!1 &146322
 GameObject:
@@ -840,15 +844,14 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
   stdDev: 1
   mean: 0
-  min_y: 0
   inverse: 0
 --- !u!1 &180510
 GameObject:
@@ -1155,6 +1158,7 @@ MonoBehaviour:
   MaxY: 0
   output: 0
   numObjects: 0
+  Inverse: 0
 --- !u!1 &960635259960354729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1241,6 +1245,7 @@ MonoBehaviour:
   MaxY: 0
   output: 0
   numObjects: 0
+  Inverse: 0
 --- !u!1 &4469401387021470119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1429,10 +1434,10 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
 --- !u!1 &8832093296595671740
@@ -1481,9 +1486,9 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0

@@ -15,8 +15,8 @@ public class CarBehaviour : MonoBehaviour
     public CarDetectorScript LeftCD;
     public CarDetectorScript RightCD;
     public float currentScale = 1.0f;
-    public float maxScale = 1.5f;
-    public float scaleMult = 1.1f;
+    public float maxScale = 3.0f;
+    public float scaleMult = 1.05f;
 
     private Rigidbody m_Rigidbody;
     public float m_LeftWheelSpeed;
@@ -71,6 +71,15 @@ public class CarBehaviour : MonoBehaviour
                 {
                     m_Rigidbody.transform.localScale = maxScale * Vector3.one;
                 }
+                Debug.Log("Ball eaten");
+            }
+        }
+        else if (other?.name.Contains("Variant") ?? false)
+        {
+            if ((m_Rigidbody.transform.localScale).sqrMagnitude > (other.transform.localScale).sqrMagnitude)
+            {
+                other.gameObject.SetActive(false);
+                Debug.Log("Car eaten");
             }
         }
     }

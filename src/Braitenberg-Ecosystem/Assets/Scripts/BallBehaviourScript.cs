@@ -33,21 +33,5 @@ public class BallBehaviourScript : MonoBehaviour
                 newObj.GetComponent<Renderer>().material.SetColor("_Color", new Color(Math.Abs(x) / 20, y, Math.Abs(z) / 20));
             }
         }
-        else if (collision.rigidbody?.name.Contains("Variant") ?? false)
-        {
-            float carVelocityMag = (collision.rigidbody.velocity).magnitude;
-            float thisVelocityMag = (_rigidbody?.velocity)?.magnitude ?? -1;
-
-            if (thisVelocityMag == -1)
-            {
-                return;
-            }
-
-            if (carVelocityMag > thisVelocityMag + 0.2)
-            {
-                gameObject.SetActive(false);
-                collision.rigidbody.transform.localScale *= 1.1f;
-            }
-        }
     }
 }

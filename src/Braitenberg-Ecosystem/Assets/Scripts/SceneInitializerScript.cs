@@ -27,7 +27,13 @@ public class SceneInitializerScript : MonoBehaviour
                 Vector3 pos = new Vector3(x, y, z);
                 Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
 
-                Instantiate(obj, pos, rot);
+                var genObj = Instantiate(obj, pos, rot);
+                if (genObj.name.Contains("Ball"))
+                {
+                    var mat = Resources.Load("Ball", typeof(Material)) as Material;
+                    genObj.GetComponent<Renderer>().material = mat;
+                    genObj.GetComponent<Renderer>().material.SetColor("_Color", new Color(Math.Abs(x) / 20, y, Math.Abs(z) / 20));
+                }
             }
         }
     }

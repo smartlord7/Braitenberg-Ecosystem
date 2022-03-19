@@ -30,7 +30,14 @@ public class LightDetectorGaussScript : LightDetectorScript
             }
         }
 
+        if (inverse)
+        {
+            return -outputActivated;
+        }
+        else
+        {
+            return outputActivated;
+        }
 
-        return outputActivated;
     }
 }

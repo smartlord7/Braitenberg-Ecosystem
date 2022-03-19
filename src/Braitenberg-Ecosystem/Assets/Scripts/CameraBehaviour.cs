@@ -17,7 +17,6 @@ public class CameraBehaviour : MonoBehaviour
         transform.eulerAngles = lastMouse;
         lastMouse = Input.mousePosition;
         
-        float f = 0.0f;
         Vector3 p = GetBaseInput();
 
         if (p.sqrMagnitude > 0)

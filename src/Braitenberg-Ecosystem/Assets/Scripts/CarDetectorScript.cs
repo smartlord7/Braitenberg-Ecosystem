@@ -46,7 +46,6 @@ public class CarDetectorScript : MonoBehaviour
 
             numObjects = Cars.Length;
 
-
             foreach (GameObject car in Cars)
             {
                 float currDist = (transform.position - car.transform.position).magnitude;
@@ -61,7 +60,7 @@ public class CarDetectorScript : MonoBehaviour
             if (closestCar != null)
             {
                 output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
-                Debug.DrawLine(transform.position, closestCar.transform.position, Color.red);
+                Debug.DrawLine(transform.position, closestCar.transform.position, Color.blue);
             }
 
         }
