@@ -9,30 +9,14 @@
         //Read sensor values
         if (DetectLights)
         {
-            if (DirectLightSensorsConnection)
-            {
-                leftSensor = LeftLD.GetOutput();
-                rightSensor = RightLD.GetOutput();
-            }
-            else
-            {
-                leftSensor = RightLD.GetOutput();
-                rightSensor = LeftLD.GetOutput();
-            }
+            leftSensor = LeftLD.GetOutput();
+            rightSensor = RightLD.GetOutput();
         }
 
         if (DetectCars)
         {
-            if (DirectCarSensorsConnection)
-            {
-                leftSensor = LeftCD.GetOutput();
-                rightSensor = RightCD.GetOutput();
-            }
-            else
-            {
-                leftSensor = RightCD.GetOutput();
-                rightSensor = LeftCD.GetOutput();
-            }
+            leftSensor = LeftCD.GetOutput();
+            rightSensor = RightCD.GetOutput();
         }
 
 

@@ -316,19 +316,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6476b914ffbc547fcbe1121d8dba100a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxSpeed: 15
+  MaxSpeed: 10
   RR: {fileID: 14660592}
   RL: {fileID: 14675050}
   DetectLights: 1
   DetectCars: 0
-  DirectLightSensorsConnection: 0
-  DirectCarSensorsConnection: 0
   RightLD: {fileID: 1010094822325634599}
   LeftLD: {fileID: 6101812135912574356}
   LeftCD: {fileID: 0}
   RightCD: {fileID: 0}
   currentScale: 1
-  maxScale: 1.5
+  maxScale: 3
   scaleMult: 1.1
   m_LeftWheelSpeed: 0
   m_RightWheelSpeed: 0
@@ -603,6 +601,7 @@ MonoBehaviour:
   LimitMax: 0
   ThresholdMin: 0
   ThresholdMax: 0
+  Inverse: 0
   output: 0
   numObjects: 0
   stdDev: 1
@@ -742,7 +741,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 70ee92d27c24f480186ec15929d4826e, type: 2}
+  - {fileID: 2100000, guid: 29b83f864a4a0d7409a0e1743ec738eb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -848,6 +847,7 @@ MonoBehaviour:
   LimitMax: 0
   ThresholdMin: 0
   ThresholdMax: 0
+  Inverse: 0
   output: 0
   numObjects: 0
   stdDev: 1
@@ -1152,10 +1152,10 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
   Inverse: 0
@@ -1239,10 +1239,10 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
   Inverse: 0
@@ -1292,12 +1292,13 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
+  Inverse: 0
   stdDev: 1
   mean: 0
 --- !u!1 &5498860399777857639
@@ -1380,12 +1381,13 @@ MonoBehaviour:
   angle: 360
   ApplyThresholds: 0
   ApplyLimits: 0
-  MinX: 0
-  MaxX: 0
-  MinY: 0
-  MaxY: 0
+  LimitMin: 0
+  LimitMax: 0
+  ThresholdMin: 0
+  ThresholdMax: 0
   output: 0
   numObjects: 0
+  Inverse: 0
   stdDev: 1
   mean: 0
 --- !u!1 &8063570606774929682
@@ -1438,6 +1440,7 @@ MonoBehaviour:
   LimitMax: 0
   ThresholdMin: 0
   ThresholdMax: 0
+  Inverse: 0
   output: 0
   numObjects: 0
 --- !u!1 &8832093296595671740
@@ -1490,5 +1493,6 @@ MonoBehaviour:
   LimitMax: 0
   ThresholdMin: 0
   ThresholdMax: 0
+  Inverse: 0
   output: 0
   numObjects: 0

@@ -81,19 +81,19 @@ PrefabInstance:
       objectReference: {fileID: 9151886255109725777}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: MaxSpeed
-      value: 15
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMax
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMin
-      value: 0.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyLimits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMax
@@ -165,19 +165,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMax
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMin
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyLimits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMax
-      value: 0.7
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMin
@@ -185,7 +185,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyThresholds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}

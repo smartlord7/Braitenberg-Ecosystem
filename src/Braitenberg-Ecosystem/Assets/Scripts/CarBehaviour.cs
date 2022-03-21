@@ -8,15 +8,13 @@ public class CarBehaviour : MonoBehaviour
     public WheelCollider RL;
     public bool DetectLights = true;
     public bool DetectCars = false;
-    public bool DirectLightSensorsConnection = false;
-    public bool DirectCarSensorsConnection = false;
     public LightDetectorScript RightLD;
     public LightDetectorScript LeftLD;
     public CarDetectorScript LeftCD;
     public CarDetectorScript RightCD;
     public float currentScale = 1.0f;
     public float maxScale = 3.0f;
-    public float scaleMult = 1.05f;
+    public float scaleMult = 1.15f;
 
     private Rigidbody m_Rigidbody;
     public float m_LeftWheelSpeed;
@@ -58,21 +56,19 @@ public class CarBehaviour : MonoBehaviour
                 return;
             }
 
-            if (carVelocity > ballVelocity + 0.2)
-            {
-                other.gameObject.SetActive(false);
+          
+            other.gameObject.SetActive(false);
 
-                if (currentScale < maxScale)
-                {
-                    m_Rigidbody.transform.localScale *= scaleMult;
-                    currentScale *= scaleMult;
-                }
-                else
-                {
-                    m_Rigidbody.transform.localScale = maxScale * Vector3.one;
-                }
-                Debug.Log("Ball eaten");
+            if (currentScale < maxScale)
+            {
+                m_Rigidbody.transform.localScale *= scaleMult;
+                currentScale *= scaleMult;
             }
+            else
+            {
+                m_Rigidbody.transform.localScale = maxScale * Vector3.one;
+            }
+            Debug.Log("Ball eaten");
         }
         else if (other?.name.Contains("Variant") ?? false)
         {

@@ -81,7 +81,7 @@ PrefabInstance:
       objectReference: {fileID: 7467389704353370811}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: MaxSpeed
-      value: 20
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: DetectCars
