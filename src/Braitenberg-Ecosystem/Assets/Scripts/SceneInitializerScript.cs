@@ -30,7 +30,7 @@ public class SceneInitializerScript : MonoBehaviour
                 var genObj = Instantiate(obj, pos, rot);
                 if (genObj.name.Contains("Ball"))
                 {
-                    var mat = Resources.Load("Ball", typeof(Material)) as Material;
+                    var mat = Resources.Load("T_02_Diffuse", typeof(Material)) as Material;
                     genObj.GetComponent<Renderer>().material = mat;
                     genObj.GetComponent<Renderer>().material.SetColor("_Color", new Color(Math.Abs(x) / 20, y, Math.Abs(z) / 20));
                 }
