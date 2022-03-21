@@ -15,10 +15,10 @@ public class CarBehaviour : MonoBehaviour
     public float currentScale = 1.0f;
     public float maxScale = 3.0f;
     public float scaleMult = 1.15f;
-
-    private Rigidbody m_Rigidbody;
     public float m_LeftWheelSpeed;
     public float m_RightWheelSpeed;
+
+    private Rigidbody m_Rigidbody;
     private float m_axleLength;
 
     void Start()
@@ -48,7 +48,6 @@ public class CarBehaviour : MonoBehaviour
 
         if (other?.name.Contains("Ball") ?? false)
         {
-            float carVelocity = (m_Rigidbody.velocity).magnitude;
             float ballVelocity = (other?.velocity)?.magnitude ?? -1;
 
             if (ballVelocity == -1)
@@ -58,16 +57,7 @@ public class CarBehaviour : MonoBehaviour
 
           
             other.gameObject.SetActive(false);
-
-            if (currentScale < maxScale)
-            {
-                m_Rigidbody.transform.localScale *= scaleMult;
-                currentScale *= scaleMult;
-            }
-            else
-            {
-                m_Rigidbody.transform.localScale = maxScale * Vector3.one;
-            }
+            eatObject(other);
             Debug.Log("Ball eaten");
         }
         else if (other?.name.Contains("Variant") ?? false)
@@ -75,8 +65,24 @@ public class CarBehaviour : MonoBehaviour
             if ((m_Rigidbody.transform.localScale).sqrMagnitude > (other.transform.localScale).sqrMagnitude)
             {
                 other.gameObject.SetActive(false);
+                eatObject(other);
                 Debug.Log("Car eaten");
             }
+        }
+    }
+
+    private void eatObject(Rigidbody other)
+    {
+        other.gameObject.SetActive(false);
+
+        if (currentScale < maxScale)
+        {
+            m_Rigidbody.transform.localScale *= scaleMult;
+            currentScale *= scaleMult;
+        }
+        else
+        {
+            m_Rigidbody.transform.localScale = maxScale * Vector3.one;
         }
     }
 }
