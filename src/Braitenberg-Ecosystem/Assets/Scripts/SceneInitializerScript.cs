@@ -15,7 +15,6 @@ public class SceneInitializerScript : MonoBehaviour
             GameObject obj = generatedObjects[j];
             int numObjects = generatedObjectsOcurrences[j];
 
-
             for (int i = 0; i < numObjects; i++)
             {
                 float x = UnityEngine.Random.Range(min.x, max.x);
@@ -38,7 +37,6 @@ public class SceneInitializerScript : MonoBehaviour
         }
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         Cursor.visible = false;

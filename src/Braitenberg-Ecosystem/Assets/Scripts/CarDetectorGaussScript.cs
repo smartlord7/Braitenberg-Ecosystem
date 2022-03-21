@@ -1,38 +1,28 @@
 ﻿using System;
+using Assets.Scripts;
 
 public class CarDetectorGaussScript : CarDetectorScript
 {
-    public float stdDev = 1.0f;
-    public float mean = 0.0f;
+    public float StdDev = 1.0f;
+    public float Mean = 0.0f;
 
-    public override float GetOutput()
+    private DetectorOutputManipulator _outputManipulator
     {
-        float outputActivated = 0;
-
-        if (!ApplyThresholds || ThresholdMin <= output && output <= ThresholdMax)
+        get
         {
-            outputActivated = (float)Math.Exp(-0.5 * Math.Pow(output - mean, 2) / Math.Pow(stdDev, 2));
-        }
-
-        if (ApplyLimits)
-        {
-            if (outputActivated < LimitMin)
-            {
-                outputActivated = LimitMin;
-            }
-            else if (outputActivated > LimitMax)
-            {
-                outputActivated = LimitMax;
-            }
-        }
-
-        if (Inverse)
-        {
-            return -outputActivated;
-        }
-        else
-        {
-            return outputActivated;
+            return new DetectorOutputManipulator(
+                Negative,
+                Inverse,
+                ApplyLimits,
+                ApplyThresholds,
+                LimitMin,
+                LimitMax,
+                ThresholdMin,
+                ThresholdMax,
+                (output) => (float)Math.Exp(-0.5 * Math.Pow(output - Mean, 2) / Math.Pow(StdDev, 2)));
         }
     }
+
+    public override float GetOutput()
+        => _outputManipulator.ManipulateOutput(output);
 }

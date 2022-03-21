@@ -1,35 +1,24 @@
-﻿public class CarDetectorLinearScript : CarDetectorScript
+﻿using Assets.Scripts;
+
+public class CarDetectorLinearScript : CarDetectorScript
 {
-    public override float GetOutput()
+    private DetectorOutputManipulator _outputManipulator
     {
-        if (ApplyThresholds)
+        get
         {
-            if (ThresholdMin < output || output > ThresholdMax)
-            {
-                output = 0.0f;
-            }
-        }
-
-        if (ApplyLimits)
-        {
-            if (output < LimitMin)
-            {
-                output = LimitMin;
-            }
-            else if (output > LimitMax)
-            {
-                output = LimitMax;
-            }
-        }
-
-
-        if (Inverse)
-        {
-            return -output;
-        }
-        else
-        {
-            return output;
+            return new DetectorOutputManipulator(
+                Negative,
+                Inverse,
+                ApplyLimits,
+                ApplyThresholds,
+                LimitMin,
+                LimitMax,
+                ThresholdMin,
+                ThresholdMax,
+                (output) => output);
         }
     }
+
+    public override float GetOutput()
+        => _outputManipulator.ManipulateOutput(output);
 }

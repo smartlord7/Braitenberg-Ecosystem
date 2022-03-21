@@ -13,6 +13,7 @@ public class CarDetectorScript : MonoBehaviour
     public float output;
     public int numObjects;
     public bool Inverse;
+    public bool Negative;
 
     void Start()
     {

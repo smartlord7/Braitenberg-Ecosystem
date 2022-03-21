@@ -55,7 +55,7 @@ public class CarBehaviour : MonoBehaviour
                 return;
             }
 
-          
+
             other.gameObject.SetActive(false);
             eatObject(other);
             Debug.Log("Ball eaten");

@@ -16,7 +16,7 @@ public class CameraBehaviour : MonoBehaviour
         lastMouse = new Vector3(transform.eulerAngles.x + lastMouse.x, transform.eulerAngles.y + lastMouse.y, 0);
         transform.eulerAngles = lastMouse;
         lastMouse = Input.mousePosition;
-        
+
         Vector3 p = GetBaseInput();
 
         if (p.sqrMagnitude > 0)
@@ -32,10 +32,10 @@ public class CameraBehaviour : MonoBehaviour
             else
             {
                 totalRun = Mathf.Clamp(totalRun * 0.5f, 1f, 1000f);
-                p = p * MainSpeed;
+                p *= MainSpeed;
             }
 
-            p = p * Time.deltaTime;
+            p *= Time.deltaTime;
             Vector3 newPosition = transform.position;
 
             if (Input.GetKey(KeyCode.Space))

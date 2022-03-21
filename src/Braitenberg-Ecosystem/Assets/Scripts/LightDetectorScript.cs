@@ -8,6 +8,7 @@ public class LightDetectorScript : MonoBehaviour
     public bool ApplyThresholds, ApplyLimits;
     public float LimitMin, LimitMax;
     public float ThresholdMin, ThresholdMax;
+    public bool Negative = false;
     public bool Inverse = false;
     private bool useAngle = true;
 

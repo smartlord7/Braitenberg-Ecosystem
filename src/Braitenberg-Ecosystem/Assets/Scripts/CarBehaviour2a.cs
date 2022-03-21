@@ -2,8 +2,8 @@
 {
     void LateUpdate()
     {
-        // YOUR CODE HERE
-        float leftSensor = 0, rightSensor = 0;
+        float leftSensor = 0;
+        float rightSensor = 0;
 
         //Read sensor values
         if (DetectLights)
@@ -17,7 +17,6 @@
             leftSensor = LeftCD.GetOutput();
             rightSensor = RightCD.GetOutput();
         }
-
 
         //Calculate target motor values
         m_LeftWheelSpeed = leftSensor * MaxSpeed;
