@@ -22,7 +22,11 @@ public class LightDetectorGaussScript : LightDetectorScript
                 (output) => (float)Math.Exp(-0.5 * Math.Pow(output - Mean, 2) / Math.Pow(StdDev, 2)));
         }
     }
-
+    
+     /// <summary>
+    /// Method that gets the sensors output (For light/gauss).
+    /// </summary>
+    /// <returns>Returns the output .</returns>
     public override float GetOutput()
         => _outputManipulator.ManipulateOutput(output);
 }

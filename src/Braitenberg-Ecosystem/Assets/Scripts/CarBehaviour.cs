@@ -17,16 +17,21 @@ public class CarBehaviour : MonoBehaviour
     public float scaleMult = 1.15f;
     public float m_LeftWheelSpeed;
     public float m_RightWheelSpeed;
-
     private Rigidbody m_Rigidbody;
     private float m_axleLength;
-
+    
+    /// <summary>
+    /// Method that sets up and starts the car.
+    /// </summary>
     void Start()
     {
         m_Rigidbody = GetComponent<Rigidbody>();
         m_axleLength = (RR.transform.position - RL.transform.position).magnitude;
     }
-
+    
+    /// <summary>
+    /// Method that calculates the car movement and updates it.
+    /// </summary>
     void FixedUpdate()
     {
         //Calculate forward movement
@@ -41,7 +46,11 @@ public class CarBehaviour : MonoBehaviour
         m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
         m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
     }
-
+    
+    /// <summary>
+    /// Method that eats the ball uppon collision.
+    /// </summary>
+    /// <param name="collision">Detects collision between the car and the ball.</param>
     public void OnCollisionEnter(Collision collision)
     {
         var other = collision.rigidbody;
@@ -70,7 +79,11 @@ public class CarBehaviour : MonoBehaviour
             }
         }
     }
-
+    
+    /// <summary>
+    /// Method that eats the car uppon collision.
+    /// </summary>
+    /// <param name="other">Detects the car that has been hit/eaten.</param>
     private void eatObject(Rigidbody other)
     {
         other.gameObject.SetActive(false);

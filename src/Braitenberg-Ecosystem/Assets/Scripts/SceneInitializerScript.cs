@@ -7,7 +7,10 @@ public class SceneInitializerScript : MonoBehaviour
     public Vector3 min;
     public GameObject[] generatedObjects;
     public int[] generatedObjectsOcurrences;
-
+    
+    /// <summary>
+    /// Method that generates a predefined scene.
+    /// </summary>
     private void GenerateScene()
     {
         for (int j = 0; j < generatedObjects.Length; j++)
@@ -37,6 +40,10 @@ public class SceneInitializerScript : MonoBehaviour
         }
     }
 
+    // Start is called before the first frame update
+    /// <summary>
+    /// Method that starts the scene.
+    /// </summary>
     void Start()
     {
         Cursor.visible = false;

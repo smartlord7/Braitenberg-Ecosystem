@@ -11,10 +11,12 @@ public class LightDetectorScript : MonoBehaviour
     public bool Negative = false;
     public bool Inverse = false;
     private bool useAngle = true;
-
     public float output;
     public int numObjects;
-
+    
+    /// <summary>
+    /// Method that starts up the light detector sensors.
+    /// </summary>
     void Start()
     {
         output = 0;
@@ -25,7 +27,10 @@ public class LightDetectorScript : MonoBehaviour
             useAngle = false;
         }
     }
-
+    
+    /// <summary>
+    /// Method that updates the light detector sensors.
+    /// </summary>
     void Update()
     {
         GameObject[] lights;
@@ -48,14 +53,26 @@ public class LightDetectorScript : MonoBehaviour
             output += 1.0f / ((transform.position - light.transform.position).sqrMagnitude / r + 1);
         }
     }
-
+    
+    /// <summary>
+    /// Method that gets the sensors output.
+    /// </summary>
+    /// <returns>Returns all "Light" tagged objects. The sensor angle is not taken into account.</returns>
     public virtual float GetOutput() { throw new NotImplementedException(); }
-
+    
+    /// <summary>
+    /// Method that gets all the lights.
+    /// </summary>
+    /// <returns>Returns all the lights. </returns>
     GameObject[] GetAllLights()
     {
         return GameObject.FindGameObjectsWithTag("Light");
     }
-
+    
+    /// <summary>
+    /// Method that gets all the visible lights.
+    /// </summary>
+    /// <returns>Returns all the visible lights. </returns>
     GameObject[] GetVisibleLights()
     {
         ArrayList visibleLights = new ArrayList();

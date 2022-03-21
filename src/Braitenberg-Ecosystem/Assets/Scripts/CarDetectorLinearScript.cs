@@ -18,7 +18,11 @@ public class CarDetectorLinearScript : CarDetectorScript
                 (output) => output);
         }
     }
-
+    
+    /// <summary>
+    /// Method that gets the sensors output(For cars/linear).
+    /// </summary>
+    /// <returns>Returns the output .</returns>
     public override float GetOutput()
         => _outputManipulator.ManipulateOutput(output);
 }

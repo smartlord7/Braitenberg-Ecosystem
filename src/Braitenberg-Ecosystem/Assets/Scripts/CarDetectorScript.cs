@@ -5,7 +5,6 @@ using UnityEngine;
 public class CarDetectorScript : MonoBehaviour
 {
     private bool useAngle = true;
-
     public float angle = 360;
     public bool ApplyThresholds, ApplyLimits;
     public float LimitMin, LimitMax;
@@ -15,6 +14,9 @@ public class CarDetectorScript : MonoBehaviour
     public bool Inverse;
     public bool Negative;
 
+    /// <summary>
+    /// Method that starts up the car detector sensors.
+    /// </summary>
     void Start()
     {
         output = 0;
@@ -25,7 +27,10 @@ public class CarDetectorScript : MonoBehaviour
             useAngle = false;
         }
     }
-
+    
+    /// <summary>
+    /// Method that updates the car detector sensors.
+    /// </summary>
     void Update()
     {
 
@@ -66,16 +71,26 @@ public class CarDetectorScript : MonoBehaviour
 
         }
     }
-
+    
+    /// <summary>
+    /// Method that gets the sensors output.
+    /// </summary>
+    /// <returns>Returns all "Light" tagged objects. The sensor angle is not taken into account.</returns>
     public virtual float GetOutput() { throw new NotImplementedException(); }
-
-    // Returns all "Light" tagged objects. The sensor angle is not taken into account.
+    
+    /// <summary>
+    /// Method that gets all the cars.
+    /// </summary>
+    /// <returns>Returns all the cars. </returns>
     GameObject[] GetAllCars()
     {
         return GameObject.FindGameObjectsWithTag("CarToFollow");
     }
-
-    // YOUR CODE HERE
+    
+    /// <summary>
+    /// Method that gets all the visible cars.
+    /// </summary>
+    /// <returns>Returns all the visible cars. </returns>
     GameObject[] GetVisibleCars()
     {
         ArrayList visiblecars = new ArrayList();

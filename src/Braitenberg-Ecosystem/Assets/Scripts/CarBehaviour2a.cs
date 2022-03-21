@@ -1,5 +1,9 @@
 ﻿public class CarBehaviour2a : CarBehaviour
 {
+    
+    /// <summary>
+    /// Method that updates and reads sensor values.
+    /// </summary>
     void LateUpdate()
     {
         float leftSensor = 0;

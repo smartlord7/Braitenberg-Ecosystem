@@ -18,7 +18,11 @@ public class LightDetectorLinearScript : LightDetectorScript
                 (output) => output);
         }
     }
-
+    
+    /// <summary>
+    /// Method that gets the sensors output(for lights/linear).
+    /// </summary>
+    /// <returns>Returns the output .</returns>
     public override float GetOutput()
         => _outputManipulator.ManipulateOutput(output);
 }

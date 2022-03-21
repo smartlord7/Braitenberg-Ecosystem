@@ -1,7 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="336bcddc-183a-4d58-87fe-335dccd751b0" name="Changes" comment="" />
+    <list default="true" id="336bcddc-183a-4d58-87fe-335dccd751b0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../Assembly-CSharp.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Scripts.dir/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BallBehaviourScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BallBehaviourScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CameraBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CameraBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarBehaviour.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarBehaviour.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarBehaviour2a.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarBehaviour2a.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDetectorGaussScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarDetectorGaussScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDetectorLinearScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarDetectorLinearScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CarDetectorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/CarDetectorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LightDetectorGaussScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LightDetectorGaussScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LightDetectorLinearScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LightDetectorLinearScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LightDetectorScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/LightDetectorScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneInitializerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SceneInitializerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Braitenberg-Ecosystem.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../../Braitenberg-Ecosystem.sln" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,11 +38,40 @@
     <setting file="file://$PROJECT_DIR$/BallBehaviourScript.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/CarDetectorScript.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="26iVh7Ie8E2VsNHzwwvCVTHPIYW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="336bcddc-183a-4d58-87fe-335dccd751b0" name="Changes" comment="" />
+      <created>1647906513873</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1647906513873</updated>
+      <workItem from="1647906516212" duration="341000" />
+    </task>
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
 </project>
