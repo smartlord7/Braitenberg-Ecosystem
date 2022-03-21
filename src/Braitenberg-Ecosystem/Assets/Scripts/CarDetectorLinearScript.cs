@@ -1,9 +1,28 @@
 ﻿public class CarDetectorLinearScript : CarDetectorScript
 {
-
-    public bool Inverse = false;
     public override float GetOutput()
     {
+        if (ApplyThresholds)
+        {
+            if (ThresholdMin < output || output > ThresholdMax)
+            {
+                output = 0.0f;
+            }
+        }
+
+        if (ApplyLimits)
+        {
+            if (output < LimitMin)
+            {
+                output = LimitMin;
+            }
+            else if (output > LimitMax)
+            {
+                output = LimitMax;
+            }
+        }
+
+
         if (Inverse)
         {
             return -output;
@@ -13,7 +32,4 @@
             return output;
         }
     }
-
-    // YOUR CODE HERE
-
 }

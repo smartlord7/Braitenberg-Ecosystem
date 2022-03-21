@@ -3,13 +3,6 @@ using UnityEngine;
 
 public class BallBehaviourScript : MonoBehaviour
 {
-
-    private Rigidbody _rigidbody;
-
-    private void Start()
-    {
-        _rigidbody = GetComponent<Rigidbody>();
-    }
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.rigidbody?.name.StartsWith("Ball") ?? false)

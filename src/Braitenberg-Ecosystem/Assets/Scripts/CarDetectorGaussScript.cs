@@ -1,15 +1,38 @@
-﻿public class CarDetectorGaussScript : CarDetectorScript
-{
+﻿using System;
 
+public class CarDetectorGaussScript : CarDetectorScript
+{
     public float stdDev = 1.0f;
     public float mean = 0.0f;
-    // Get gaussian output value
+
     public override float GetOutput()
     {
-        // YOUR CODE HERE
+        float outputActivated = 0;
 
-        return 0.0f;
+        if (!ApplyThresholds || ThresholdMin <= output && output <= ThresholdMax)
+        {
+            outputActivated = (float)Math.Exp(-0.5 * Math.Pow(output - mean, 2) / Math.Pow(stdDev, 2));
+        }
+
+        if (ApplyLimits)
+        {
+            if (outputActivated < LimitMin)
+            {
+                outputActivated = LimitMin;
+            }
+            else if (outputActivated > LimitMax)
+            {
+                outputActivated = LimitMax;
+            }
+        }
+
+        if (Inverse)
+        {
+            return -outputActivated;
+        }
+        else
+        {
+            return outputActivated;
+        }
     }
-
-
 }

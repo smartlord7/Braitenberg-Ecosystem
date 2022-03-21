@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class LightDetectorScript : MonoBehaviour
 {
-
     public float angle = 360;
     public bool ApplyThresholds, ApplyLimits;
     public float LimitMin, LimitMax;
     public float ThresholdMin, ThresholdMax;
+    public bool Inverse = false;
     private bool useAngle = true;
 
     public float output;
@@ -43,24 +43,18 @@ public class LightDetectorScript : MonoBehaviour
 
         foreach (GameObject light in lights)
         {
-            //print (1 / (transform.position - light.transform.position).sqrMagnitude);
             float r = light.GetComponent<Light>().range;
             output += 1.0f / ((transform.position - light.transform.position).sqrMagnitude / r + 1);
-            //Debug.DrawLine (transform.position, light.transform.position, Color.red);
         }
-
     }
 
     public virtual float GetOutput() { throw new NotImplementedException(); }
 
-    // Returns all "Light" tagged objects. The sensor angle is not taken into account.
     GameObject[] GetAllLights()
     {
         return GameObject.FindGameObjectsWithTag("Light");
     }
 
-    // Returns all "Light" tagged objects that are within the view angle of the Sensor. 
-    // Only considers the angle over the y axis. Does not consider objects blocking the view.
     GameObject[] GetVisibleLights()
     {
         ArrayList visibleLights = new ArrayList();

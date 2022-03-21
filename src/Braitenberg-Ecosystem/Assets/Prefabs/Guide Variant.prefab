@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LeftLD
       value: 
-      objectReference: {fileID: 5575964544409851462}
+      objectReference: {fileID: 2714375504177829346}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: RightCD
       value: 
@@ -78,14 +78,42 @@ PrefabInstance:
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: RightLD
       value: 
-      objectReference: {fileID: 4847112678846164993}
+      objectReference: {fileID: 9151886255109725777}
+    - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: MaxSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMin
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ThresholdMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ThresholdMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyThresholds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: mean
-      value: 0.25
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMax
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMin
@@ -97,7 +125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMax
-      value: 0.6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMin
@@ -109,15 +137,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: mean
-      value: 0.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMax
-      value: 0.4
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMin
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyLimits
@@ -125,38 +153,62 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMax
-      value: 0.5
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMin
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyThresholds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMin
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ThresholdMax
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ThresholdMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyThresholds
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
---- !u!114 &4847112678846164993 stripped
+--- !u!114 &9151886255109725777 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1010094822325634599, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
   m_PrefabInstance: {fileID: 8144368417528748150}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a26d17b5f7ae43a1b646ca2e1700458, type: 3}
+  m_Script: {fileID: 11500000, guid: a600c741beed54732aa00e64782cbd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &5575964544409851462 stripped
+--- !u!114 &2714375504177829346 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+  m_CorrespondingSourceObject: {fileID: 6101812135912574356, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
   m_PrefabInstance: {fileID: 8144368417528748150}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a26d17b5f7ae43a1b646ca2e1700458, type: 3}
+  m_Script: {fileID: 11500000, guid: a600c741beed54732aa00e64782cbd1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2661159094940680631 stripped

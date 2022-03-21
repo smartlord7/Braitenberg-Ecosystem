@@ -7,8 +7,6 @@ public class LightDetectorGaussScript : LightDetectorScript
     public float mean = 10.0f;
     public bool inverse = false;
 
-
-    // Get gaussian output value
     public override float GetOutput()
     {
         float outputActivated = 0;
@@ -38,6 +36,5 @@ public class LightDetectorGaussScript : LightDetectorScript
         {
             return outputActivated;
         }
-
     }
 }

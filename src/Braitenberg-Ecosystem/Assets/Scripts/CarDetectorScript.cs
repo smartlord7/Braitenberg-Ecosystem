@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class CarDetectorScript : MonoBehaviour
 {
-
     private bool useAngle = true;
 
     public float angle = 360;
     public bool ApplyThresholds, ApplyLimits;
-    public float MinX, MaxX, MinY, MaxY;
+    public float LimitMin, LimitMax;
+    public float ThresholdMin, ThresholdMax;
     public float output;
     public int numObjects;
+    public bool Inverse;
 
     void Start()
     {
@@ -60,7 +61,6 @@ public class CarDetectorScript : MonoBehaviour
             if (closestCar != null)
             {
                 output = 1.0f / ((transform.position - closestCar.transform.position).magnitude + 1);
-                Debug.DrawLine(transform.position, closestCar.transform.position, Color.blue);
             }
 
         }
