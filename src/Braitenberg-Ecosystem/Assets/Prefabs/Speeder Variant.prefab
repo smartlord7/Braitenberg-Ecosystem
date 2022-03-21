@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6188935445940578462, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 553e1334e337f034e9bf40ff196ffe53, type: 2}
     - target: {fileID: 6188935445942466046, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
       propertyPath: m_Name
       value: Speeder Variant
