@@ -840,7 +840,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: ccb5f40cc781d40f3bed05edddeaee1e, type: 2}
+  - {fileID: 2100000, guid: fa500866910c76f4483c590c12b1187b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -971,6 +971,7 @@ GameObject:
   - component: {fileID: 1505371833}
   - component: {fileID: 1505371831}
   - component: {fileID: 1505371830}
+  - component: {fileID: 1505371832}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -994,6 +995,22 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505371829}
   m_Enabled: 1
+--- !u!114 &1505371832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505371829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c52d2eba7a2fe9499fac4da7278413a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainSpeed: 100
+  ShiftAdd: 250
+  MaxShift: 1000
+  CamSens: 0.25
 --- !u!20 &1505371833
 Camera:
   m_ObjectHideFlags: 0
@@ -1020,7 +1037,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 30
   m_Depth: -1
   m_CullingMask:
