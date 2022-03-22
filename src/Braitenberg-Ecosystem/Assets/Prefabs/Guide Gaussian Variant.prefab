@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2714375504177829346, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
-      value: 0
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 2714375504177829346, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
@@ -17,7 +17,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2714375504177829346, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyLimits
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2714375504177829346, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
@@ -42,7 +42,7 @@ PrefabInstance:
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LeftLD
       value: 
-      objectReference: {fileID: 5511492176320421409}
+      objectReference: {fileID: 4780968580361386086}
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: RightCD
       value: 
@@ -50,7 +50,11 @@ PrefabInstance:
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: RightLD
       value: 
-      objectReference: {fileID: 4780968580361386086}
+      objectReference: {fileID: 5511492176320421409}
+    - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: MaxSpeed
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 8144368417526385188, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -105,7 +109,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9151886255109725777, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
-      value: 0
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: 9151886255109725777, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
