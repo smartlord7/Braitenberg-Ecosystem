@@ -28,6 +28,10 @@ namespace Assets.Scripts
             this.ActivationFunction = activationFunction;
         }
 
+        /// <summary>
+        /// Method that gets the output after applying activation functions/filters on it.
+        /// </summary>
+        /// <returns>Returns the manipulated output.</returns>
         public float ManipulateOutput(float output)
         {
             if (Inverse)

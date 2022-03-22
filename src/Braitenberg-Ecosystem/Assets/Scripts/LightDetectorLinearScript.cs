@@ -18,7 +18,7 @@ public class LightDetectorLinearScript : LightDetectorScript
                 (output) => output);
         }
     }
-    
+
     /// <summary>
     /// Method that gets the sensors output(for lights/linear).
     /// </summary>

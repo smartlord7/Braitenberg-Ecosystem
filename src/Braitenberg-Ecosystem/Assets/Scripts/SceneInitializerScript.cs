@@ -7,7 +7,7 @@ public class SceneInitializerScript : MonoBehaviour
     public Vector3 min;
     public GameObject[] generatedObjects;
     public int[] generatedObjectsOcurrences;
-    
+
     /// <summary>
     /// Method that generates a predefined scene.
     /// </summary>

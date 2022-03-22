@@ -3,11 +3,11 @@ using UnityEngine;
 
 public class BallBehaviourScript : MonoBehaviour
 {
-    
+
     /// <summary>
     /// Method that clones balls upon hit.
     /// </summary>
-    /// <param name="collision">Detects collision between balls.</param>
+    /// <param name="collision">The object the ball hit</param>
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.rigidbody?.name.StartsWith("Ball") ?? false)

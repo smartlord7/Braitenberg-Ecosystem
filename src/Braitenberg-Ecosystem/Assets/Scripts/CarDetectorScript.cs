@@ -27,7 +27,7 @@ public class CarDetectorScript : MonoBehaviour
             useAngle = false;
         }
     }
-    
+
     /// <summary>
     /// Method that updates the car detector sensors.
     /// </summary>
@@ -71,27 +71,27 @@ public class CarDetectorScript : MonoBehaviour
 
         }
     }
-    
+
     /// <summary>
     /// Method that gets the sensors output.
     /// </summary>
     /// <returns>Returns all "Light" tagged objects. The sensor angle is not taken into account.</returns>
     public virtual float GetOutput() { throw new NotImplementedException(); }
-    
+
     /// <summary>
     /// Method that gets all the cars.
     /// </summary>
     /// <returns>Returns all the cars. </returns>
-    GameObject[] GetAllCars()
+    private GameObject[] GetAllCars()
     {
         return GameObject.FindGameObjectsWithTag("CarToFollow");
     }
-    
+
     /// <summary>
     /// Method that gets all the visible cars.
     /// </summary>
     /// <returns>Returns all the visible cars. </returns>
-    GameObject[] GetVisibleCars()
+    private GameObject[] GetVisibleCars()
     {
         ArrayList visiblecars = new ArrayList();
         float halfangle = angle / 2.0f;
@@ -114,6 +114,4 @@ public class CarDetectorScript : MonoBehaviour
         }
         return (GameObject[])visiblecars.ToArray(typeof(GameObject));
     }
-
-
 }

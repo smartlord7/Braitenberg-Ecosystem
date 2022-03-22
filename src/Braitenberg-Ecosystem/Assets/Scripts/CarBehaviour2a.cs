@@ -1,8 +1,8 @@
 ﻿public class CarBehaviour2a : CarBehaviour
 {
-    
+
     /// <summary>
-    /// Method that updates and reads sensor values.
+    /// Method that reads and updates the sensor values.
     /// </summary>
     void LateUpdate()
     {

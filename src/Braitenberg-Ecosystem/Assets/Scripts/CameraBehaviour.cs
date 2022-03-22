@@ -8,7 +8,7 @@ public class CameraBehaviour : MonoBehaviour
     public float CamSens = 0.25f;
     private Vector3 lastMouse = new Vector3(255, 255, 255);
     private float totalRun = 1.0f;
-    
+
     /// <summary>
     /// Method that updates the camera position.
     /// </summary>
@@ -54,11 +54,11 @@ public class CameraBehaviour : MonoBehaviour
             }
         }
     }
-    
+
     /// <summary>
     /// Gets the keyboard input for the camera.
     /// </summary>
-    /// <returns>Returns the player velocity .</returns>
+    /// <returns>Returns the player velocity vector.</returns>
     private Vector3 GetBaseInput()
     {
         Vector3 p_Velocity = new Vector3();

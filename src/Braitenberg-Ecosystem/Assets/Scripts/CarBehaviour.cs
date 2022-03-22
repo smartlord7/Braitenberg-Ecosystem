@@ -19,7 +19,7 @@ public class CarBehaviour : MonoBehaviour
     public float m_RightWheelSpeed;
     private Rigidbody m_Rigidbody;
     private float m_axleLength;
-    
+
     /// <summary>
     /// Method that sets up and starts the car.
     /// </summary>
@@ -28,14 +28,14 @@ public class CarBehaviour : MonoBehaviour
         m_Rigidbody = GetComponent<Rigidbody>();
         m_axleLength = (RR.transform.position - RL.transform.position).magnitude;
     }
-    
+
     /// <summary>
-    /// Method that calculates the car movement and updates its position.
+    /// Method that calculates that checks if the car is in the defined physical boundaries, calculates its movement and updates its position.
     /// </summary>
     void FixedUpdate()
     {
         if (Vector3.Dot(transform.up, Vector3.up) <= 0)
-        { 
+        {
             transform.Rotate(transform.forward, 180);
         }
 
@@ -56,7 +56,7 @@ public class CarBehaviour : MonoBehaviour
         m_Rigidbody.MovePosition(m_Rigidbody.position + movement);
         m_Rigidbody.MoveRotation(m_Rigidbody.rotation * turnRotation);
     }
-    
+
     /// <summary>
     /// Method that sets the event uppon collision.
     /// </summary>
@@ -97,7 +97,7 @@ public class CarBehaviour : MonoBehaviour
             transform.Rotate(Vector3.up, 45);
         }
     }
-    
+
     /// <summary>
     /// Method that eats an object uppon collision.
     /// </summary>
