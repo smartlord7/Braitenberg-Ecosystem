@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 118578, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: m_Name
-      value: Unfollower Variant
+      value: Unfollower Gaussian Variant
       objectReference: {fileID: 0}
     - target: {fileID: 118578, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: m_TagString
@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LeftLD
       value: 
-      objectReference: {fileID: 7603437531655730428}
+      objectReference: {fileID: 0}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: RightCD
       value: 
@@ -78,7 +78,7 @@ PrefabInstance:
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: RightLD
       value: 
-      objectReference: {fileID: 7467389704353370811}
+      objectReference: {fileID: 0}
     - target: {fileID: 11496184, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: MaxSpeed
       value: 10
@@ -91,33 +91,53 @@ PrefabInstance:
       propertyPath: DetectLights
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
-      propertyPath: mean
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+    - target: {fileID: 45354749403944088, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMax
       value: 0.7
       objectReference: {fileID: 0}
-    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+    - target: {fileID: 45354749403944088, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMin
       value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+    - target: {fileID: 45354749403944088, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyLimits
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 45354749403944088, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ThresholdMax
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 45354749403944088, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyThresholds
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: mean
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMax
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMin
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyLimits
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMax
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMin
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyThresholds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: mean
@@ -125,25 +145,45 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMax
-      value: 0.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: LimitMin
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyLimits
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMax
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ThresholdMin
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyThresholds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190424136717392321, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMax
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190424136717392321, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: LimitMin
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190424136717392321, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ApplyLimits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190424136717392321, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
+      propertyPath: ThresholdMax
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6190424136717392321, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
       propertyPath: ApplyThresholds
       value: 1
       objectReference: {fileID: 0}
@@ -157,28 +197,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
---- !u!114 &7467389704353370811 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3621734815262107767, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
-  m_PrefabInstance: {fileID: 6188935445942418124}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a26d17b5f7ae43a1b646ca2e1700458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &7603437531655730428 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4352541955692875312, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
-  m_PrefabInstance: {fileID: 6188935445942418124}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a26d17b5f7ae43a1b646ca2e1700458, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &3182035358442253 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6190424136717392321, guid: a094c41ba2a5f421c9090afea1164b25, type: 3}
