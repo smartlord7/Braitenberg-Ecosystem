@@ -32,7 +32,7 @@ namespace Assets.Scripts
         {
             if (Inverse)
             {
-                output = 1.0f / output;
+                output = 1.0f - output;
             }
 
             float outputActivated = 0;
