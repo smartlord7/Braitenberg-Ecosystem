@@ -18,8 +18,8 @@
 
         if (DetectCars)
         {
-            leftSensor = LeftCD.GetOutput();
-            rightSensor = RightCD.GetOutput();
+            leftSensor += LeftCD.GetOutput();
+            rightSensor += RightCD.GetOutput();
         }
 
         //Calculate target motor values
