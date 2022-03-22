@@ -772,8 +772,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: Mean
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: StdDev
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
@@ -793,19 +801,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
-      value: 0.8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMin
-      value: 0.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyThresholds
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: Mean
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: StdDev
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
@@ -829,11 +845,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
-      value: 0.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMin
-      value: 0.33
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyThresholds
@@ -921,6 +937,7 @@ GameObject:
   - component: {fileID: 1505371833}
   - component: {fileID: 1505371831}
   - component: {fileID: 1505371830}
+  - component: {fileID: 1505371832}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -944,6 +961,22 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1505371829}
   m_Enabled: 1
+--- !u!114 &1505371832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1505371829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c52d2eba7a2fe9499fac4da7278413a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MainSpeed: 100
+  ShiftAdd: 250
+  MaxShift: 1000
+  CamSens: 0.25
 --- !u!20 &1505371833
 Camera:
   m_ObjectHideFlags: 0
@@ -970,7 +1003,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 1
+  orthographic: 0
   orthographic size: 30
   m_Depth: -1
   m_CullingMask:
