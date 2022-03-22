@@ -20,21 +20,27 @@ public class SceneInitializerScript : MonoBehaviour
 
             for (int i = 0; i < numObjects; i++)
             {
-                float x = UnityEngine.Random.Range(min.x, max.x);
+                float x = UnityEngine.Random.Range(min.x + 2, max.x - 2);
                 float y = UnityEngine.Random.Range(min.y, max.y);
-                float z = UnityEngine.Random.Range(min.z, max.z);
+                float z = UnityEngine.Random.Range(min.z + 2, max.z - 2);
                 float angle = UnityEngine.Random.Range(0, Mathf.PI);
                 float angleDegrees = -angle * Mathf.Rad2Deg;
 
                 Vector3 pos = new Vector3(x, y, z);
                 Quaternion rot = Quaternion.Euler(0, angleDegrees, 0);
 
-                var genObj = Instantiate(obj, pos, rot);
-                if (genObj.name.Contains("Ball"))
+                if (obj.name.Contains("Ball"))
                 {
+                    float customY = UnityEngine.Random.Range(3, 20);
+                    pos.y = customY;
+                    var genObj = Instantiate(obj, pos, rot);
                     var mat = Resources.Load("T_02_Diffuse", typeof(Material)) as Material;
                     genObj.GetComponent<Renderer>().material = mat;
                     genObj.GetComponent<Renderer>().material.SetColor("_Color", new Color(Math.Abs(x) / 20, y, Math.Abs(z) / 20));
+                }
+                else
+                {
+                    Instantiate(obj, pos, rot);
                 }
             }
         }
