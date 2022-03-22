@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 94151388556441432, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
+      propertyPath: LimitMax
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 94151388556441432, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
+      propertyPath: LimitMin
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 94151388556441432, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
+      propertyPath: ApplyLimits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6188935445940578462, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -84,6 +96,10 @@ PrefabInstance:
       value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6188935445948649524, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
+      propertyPath: maxScale
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6188935445948649524, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
       propertyPath: DetectCars
       value: 0
       objectReference: {fileID: 0}
@@ -94,6 +110,10 @@ PrefabInstance:
     - target: {fileID: 6622279492924013803, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
       propertyPath: LimitMax
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6622279492924013803, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
+      propertyPath: LimitMin
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6622279492924013803, guid: 6525bbaa36180504ea8adf93468d9476, type: 3}
       propertyPath: ApplyLimits
