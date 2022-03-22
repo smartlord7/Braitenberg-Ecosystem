@@ -353,12 +353,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: Inverse
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMax
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LimitMin
-      value: 0.2
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyLimits
@@ -366,15 +370,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
-      value: 0.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMin
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4847112678846164993, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyThresholds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: mean
@@ -382,6 +386,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: stdDev
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: Inverse
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
@@ -402,15 +410,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMax
-      value: 0.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ThresholdMin
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5575964544409851462, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: ApplyThresholds
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8144368417518482062, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: LeftCD
@@ -487,6 +495,10 @@ PrefabInstance:
     - target: {fileID: 8144368417528862532, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
       propertyPath: m_Name
       value: Guide Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9151886255109725777, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
+      propertyPath: Inverse
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c149292986dd80e40901e0960ff6c81d, type: 3}
