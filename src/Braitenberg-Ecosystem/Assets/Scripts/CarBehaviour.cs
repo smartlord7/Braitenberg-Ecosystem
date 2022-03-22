@@ -30,10 +30,20 @@ public class CarBehaviour : MonoBehaviour
     }
     
     /// <summary>
-    /// Method that calculates the car movement and updates it.
+    /// Method that calculates the car movement and updates its position.
     /// </summary>
     void FixedUpdate()
     {
+        if (Vector3.Dot(transform.up, Vector3.up) <= 0)
+        { 
+            transform.Rotate(transform.forward, 180);
+        }
+
+        if (transform.position.y < 0)
+        {
+            transform.position = new Vector3(0, 3, 0);
+        }
+
         //Calculate forward movement
         float targetSpeed = (m_LeftWheelSpeed + m_RightWheelSpeed) / 2;
         Vector3 movement = transform.forward * targetSpeed * Time.fixedDeltaTime;
@@ -48,9 +58,9 @@ public class CarBehaviour : MonoBehaviour
     }
     
     /// <summary>
-    /// Method that eats the ball uppon collision.
+    /// Method that sets the event uppon collision.
     /// </summary>
-    /// <param name="collision">Detects collision between the car and the ball.</param>
+    /// <param name="collision">The object that has been hit</param>
     public void OnCollisionEnter(Collision collision)
     {
         var other = collision.rigidbody;
@@ -78,12 +88,20 @@ public class CarBehaviour : MonoBehaviour
                 Debug.Log("Car eaten");
             }
         }
+        else if (other?.name.Contains("Wall") ?? false)
+        {
+            transform.Rotate(Vector3.up, 90);
+        }
+        else if (other?.name.Contains("Obstacle") ?? false)
+        {
+            transform.Rotate(Vector3.up, 45);
+        }
     }
     
     /// <summary>
-    /// Method that eats the car uppon collision.
+    /// Method that eats an object uppon collision.
     /// </summary>
-    /// <param name="other">Detects the car that has been hit/eaten.</param>
+    /// <param name="other">The object that has been hit and will be eaten.</param>
     private void eatObject(Rigidbody other)
     {
         other.gameObject.SetActive(false);
