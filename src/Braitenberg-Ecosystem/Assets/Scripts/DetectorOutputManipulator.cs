@@ -34,11 +34,6 @@ namespace Assets.Scripts
         /// <returns>Returns the manipulated output.</returns>
         public float ManipulateOutput(float output)
         {
-            if (Inverse)
-            {
-                output = 1.0f - output;
-            }
-
             float outputActivated = 0;
 
             if (!ApplyThresholds || ThresholdMin <= output && output <= ThresholdMax)
@@ -56,6 +51,11 @@ namespace Assets.Scripts
                 {
                     outputActivated = LimitMax;
                 }
+            }
+
+            if (Inverse)
+            {
+                output = 1.0f - output;
             }
 
             if (Negative)
